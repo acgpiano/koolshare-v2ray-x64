@@ -4,6 +4,8 @@
 
 ##### 注意：仅适用于koolshare x64版（电脑版）openwrt lede商店的离线安装
 
+##### 配套稳定跑满带宽线路推荐：https://66776677.xyz/?invite=iu87dgj
+
 安装方法：
 
 ssh或者网页打开终端运行
