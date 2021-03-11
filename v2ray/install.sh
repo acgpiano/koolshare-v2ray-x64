@@ -37,8 +37,8 @@ dbus set softcenter_module_v2ray_description=模块化的代理软件包
 dbus set softcenter_module_v2ray_install=4
 dbus set softcenter_module_v2ray_name=v2ray
 dbus set softcenter_module_v2ray_title="V2Ray"
-dbus set softcenter_module_v2ray_version=4.31.3
-dbus set v2ray_version=4.31.3
+dbus set softcenter_module_v2ray_version=4.35.1
+dbus set v2ray_version=4.35.1
 
 sleep 1
 rm -rf $KSROOT/v2ray/gfw.txt
