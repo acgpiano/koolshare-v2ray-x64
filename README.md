@@ -8,17 +8,18 @@
 
 安装方法：
 
-ssh 或者网页打开终端运行
+1. ssh 或者网页打开终端运行（必要，解除系统安装限制）
 
 ```
 sed -i 's/\tdetect_package/\t# detect_package/g' /koolshare/scripts/ks_tar_install.sh
 ```
 
-下载离线安装包，在商店离线界面安装
+2. 下载离线安装包，在商店离线界面安装
 
 https://github.com/acgpiano/koolshare-v2ray-x64/releases
 
 更新历史:
 
 2020-03-11 更新规则列表自动更新源，更新 v2ray 版本 4.35.1
+
 2020-10-26 更新 v2ray 安装源，更新至 v2ray 4.31.3
