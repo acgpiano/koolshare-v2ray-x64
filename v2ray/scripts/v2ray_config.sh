@@ -895,13 +895,13 @@ check_update_v2ray() {
 #=====================
 update_rule() {
 	url_back="https://koolshare.ngrok.wang/maintain_files"
-	url_main="https://raw.githubusercontent.com/hq450/fancyss/master/rules/"
+	url_main="https://cdn.jsdelivr.net/gh/qxzg/Actions@master/fancyss_rules/"
 	# version dectet
 	version_gfwlist1=$(cat $KSROOT/v2ray/version | sed -n 1p | sed 's/ /\n/g' | sed -n 1p)
 	version_chnroute1=$(cat $KSROOT/v2ray/version | sed -n 2p | sed 's/ /\n/g' | sed -n 1p)
 	version_cdn1=$(cat $KSROOT/v2ray/version | sed -n 4p | sed 's/ /\n/g' | sed -n 1p)
 	version_Routing1=$(cat $KSROOT/v2ray/version | sed -n 5p | sed 's/ /\n/g' | sed -n 1p)
-	version_WhiteList1=$(cat $KSROOT/v2ray/version | sed -n 6p | sed 's/ /\n/g' | sed -n 1p)
+	version_WhiteList1=$(cat $KSROOT/v2ray/version | sed -n 7p | sed 's/ /\n/g' | sed -n 1p)
 	echo_date 开始更新koolss规则，请等待...
 	wget --no-check-certificate --timeout=8 -qO - $url_main/version1 >/tmp/version1
 	if [ "$?" == "0" ]; then
@@ -921,19 +921,19 @@ update_rule() {
 	git_line2=$(cat /tmp/version1 | sed -n 2p)
 	git_line4=$(cat /tmp/version1 | sed -n 4p)
 	git_line5=$(cat /tmp/version1 | sed -n 5p)
-	git_line6=$(cat /tmp/version1 | sed -n 6p)
+	git_line7=$(cat /tmp/version1 | sed -n 7p)
 
 	version_gfwlist2=$(echo $git_line1 | sed 's/ /\n/g' | sed -n 1p)
 	version_chnroute2=$(echo $git_line2 | sed 's/ /\n/g' | sed -n 1p)
 	version_cdn2=$(echo $git_line4 | sed 's/ /\n/g' | sed -n 1p)
 	version_Routing2=$(echo $git_line5 | sed 's/ /\n/g' | sed -n 1p)
-	version_WhiteList2=$(echo $git_line6 | sed 's/ /\n/g' | sed -n 1p)
+	version_WhiteList2=$(echo $git_line7 | sed 's/ /\n/g' | sed -n 1p)
 
 	md5sum_gfwlist2=$(echo $git_line1 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
 	md5sum_chnroute2=$(echo $git_line2 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
 	md5sum_cdn2=$(echo $git_line4 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
 	md5sum_Routing2=$(echo $git_line5 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
-	md5sum_WhiteList2=$(echo $git_line6 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
+	md5sum_WhiteList2=$(echo $git_line7 | sed 's/ /\n/g' | tail -n 2 | head -n 1)
 
 	# update gfwlist
 	if [ "$v2ray_basic_gfwlist_update" == "1" ] || [ -n "$1" ]; then
